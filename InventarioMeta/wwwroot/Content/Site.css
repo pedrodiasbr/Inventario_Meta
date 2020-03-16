@@ -1,0 +1,53 @@
+﻿.acoesGrid {
+    width: 32px;
+    text-align: center;
+}
+
+.btnAcaoGrid {
+    width: 28px;
+}
+
+    .btnAcaoGrid:hover {
+        cursor: pointer;
+    }
+
+.logo {
+    text-align: center;
+}
+
+    .logo img {
+        width: 200px;
+    }
+
+.logo-interno {
+    width: 150px !important;
+}
+
+.cursor-default {
+    cursor: default !important;
+}
+
+.sweet-alert h2 {
+    font-size: 22px !important;
+    padding-top: 10px;
+}
+
+.table td {
+    vertical-align: middle !important;
+}
+
+.panel-toolbar {
+    padding-top: 13px !important;
+}
+
+.panel-hdr {
+    height: 60px !important;
+}
+
+.dropdown-menu.show {
+    left: -85px !important;
+}
+
+.bg-city-midia {
+    background-color: #323fac;
+}

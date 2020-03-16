@@ -1,0 +1,122 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\LayoutHtml\RecuperarSenha.html" />
+    <None Include="wwwroot\Content\layout\css\app.bundle.css" />
+    <None Include="wwwroot\Content\layout\css\datagrid\datatables\datatables.bundle.css" />
+    <None Include="wwwroot\Content\layout\css\fa-brands.css" />
+    <None Include="wwwroot\Content\layout\css\fa-regular.css" />
+    <None Include="wwwroot\Content\layout\css\fa-solid.css" />
+    <None Include="wwwroot\Content\layout\css\formplugins\bootstrap-colorpicker\bootstrap-colorpicker.css" />
+    <None Include="wwwroot\Content\layout\css\formplugins\bootstrap-datepicker\bootstrap-datepicker.css" />
+    <None Include="wwwroot\Content\layout\css\formplugins\bootstrap-daterangepicker\bootstrap-daterangepicker.css" />
+    <None Include="wwwroot\Content\layout\css\formplugins\cropperjs\cropper.css" />
+    <None Include="wwwroot\Content\layout\css\formplugins\dropzone\dropzone.css" />
+    <None Include="wwwroot\Content\layout\css\formplugins\ion-rangeslider\ion-rangeslider.css" />
+    <None Include="wwwroot\Content\layout\css\formplugins\select2\select2.bundle.css" />
+    <None Include="wwwroot\Content\layout\css\formplugins\summernote\summernote.css" />
+    <None Include="wwwroot\Content\layout\css\miscellaneous\fullcalendar\fullcalendar.bundle.css" />
+    <None Include="wwwroot\Content\layout\css\miscellaneous\jqvmap\jqvmap.bundle.css" />
+    <None Include="wwwroot\Content\layout\css\miscellaneous\lightgallery\fonts\lgd41d.html" />
+    <None Include="wwwroot\Content\layout\css\miscellaneous\lightgallery\fonts\lgd641-2.html" />
+    <None Include="wwwroot\Content\layout\css\miscellaneous\lightgallery\fonts\lgd641-3.html" />
+    <None Include="wwwroot\Content\layout\css\miscellaneous\lightgallery\fonts\lgd641-4.html" />
+    <None Include="wwwroot\Content\layout\css\miscellaneous\lightgallery\fonts\lgd641.html" />
+    <None Include="wwwroot\Content\layout\css\miscellaneous\lightgallery\lightgallery.bundle.css" />
+    <None Include="wwwroot\Content\layout\css\miscellaneous\reactions\reactions.css" />
+    <None Include="wwwroot\Content\layout\css\notifications\sweetalert2\sweetalert2.bundle.css" />
+    <None Include="wwwroot\Content\layout\css\notifications\toastr\toastr.css" />
+    <None Include="wwwroot\Content\layout\css\page-invoice.css" />
+    <None Include="wwwroot\Content\layout\css\page-login.css" />
+    <None Include="wwwroot\Content\layout\css\statistics\c3\c3.css" />
+    <None Include="wwwroot\Content\layout\css\statistics\chartist\chartist.css" />
+    <None Include="wwwroot\Content\layout\css\statistics\chartjs\chartjs.css" />
+    <None Include="wwwroot\Content\layout\css\statistics\dygraph\dygraph.css" />
+    <None Include="wwwroot\Content\layout\css\theme-demo.css" />
+    <None Include="wwwroot\Content\layout\css\themes\cust-theme-8.css" />
+    <None Include="wwwroot\Content\layout\css\vendors.bundle.css" />
+    <None Include="wwwroot\Content\layout\gijgo\gijgo-material.ttf" />
+    <None Include="wwwroot\Content\layout\gijgo\gijgo.min.css" />
+    <None Include="wwwroot\Content\layout\gijgo\gijgo.min.js" />
+    <None Include="wwwroot\Content\layout\img\avatar-f.png" />
+    <None Include="wwwroot\Content\layout\img\avatar-m.png" />
+    <None Include="wwwroot\Content\layout\img\favicon.png" />
+    <None Include="wwwroot\Content\layout\img\logo-white.png" />
+    <None Include="wwwroot\Content\layout\img\logo.png" />
+    <None Include="wwwroot\Content\layout\img\logometa.png" />
+    <None Include="wwwroot\Content\layout\img\option.png" />
+    <None Include="wwwroot\Content\layout\js\app.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\datagrid\datatables\datatables.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\datagrid\datatables\datatables.export.js" />
+    <None Include="wwwroot\Content\layout\js\dependency\moment\moment.js" />
+    <None Include="wwwroot\Content\layout\js\formplugins\bootstrap-colorpicker\bootstrap-colorpicker.js" />
+    <None Include="wwwroot\Content\layout\js\formplugins\bootstrap-datepicker\bootstrap-datepicker.js" />
+    <None Include="wwwroot\Content\layout\js\formplugins\bootstrap-daterangepicker\bootstrap-daterangepicker.js" />
+    <None Include="wwwroot\Content\layout\js\formplugins\cropperjs\cropper.js" />
+    <None Include="wwwroot\Content\layout\js\formplugins\dropzone\dropzone.js" />
+    <None Include="wwwroot\Content\layout\js\formplugins\inputmask\inputmask.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\formplugins\ion-rangeslider\ion-rangeslider.js" />
+    <None Include="wwwroot\Content\layout\js\formplugins\select2\select2.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\formplugins\summernote\summernote.js" />
+    <None Include="wwwroot\Content\layout\js\holder.js" />
+    <None Include="wwwroot\Content\layout\js\miscellaneous\fullcalendar\fullcalendar.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\miscellaneous\jqvmap\jqvmap.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\miscellaneous\lightgallery\lightgallery.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\notifications\sweetalert2\sweetalert2.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\notifications\toastr\toastr.js" />
+    <None Include="wwwroot\Content\layout\js\statistics\c3\c3.js" />
+    <None Include="wwwroot\Content\layout\js\statistics\chartist\chartist.js" />
+    <None Include="wwwroot\Content\layout\js\statistics\chartjs\chartjs.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\statistics\d3\d3.js" />
+    <None Include="wwwroot\Content\layout\js\statistics\demo-data\demo-c3.js" />
+    <None Include="wwwroot\Content\layout\js\statistics\demo-data\demo-data-dygraph.js" />
+    <None Include="wwwroot\Content\layout\js\statistics\dygraph\dygraph.js" />
+    <None Include="wwwroot\Content\layout\js\statistics\easypiechart\easypiechart.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\statistics\flot\flot.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\statistics\peity\peity.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\statistics\sparkline\sparkline.bundle.js" />
+    <None Include="wwwroot\Content\layout\js\vendors.bundle.js" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-brands-400.eot" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-brands-400.html" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-brands-400.ttf" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-brands-400.woff" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-brands-400d41d.eot" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-light-300.eot" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-light-300.html" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-light-300.svg" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-light-300.ttf" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-light-300.woff" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-light-300d41d.eot" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-regular-400.eot" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-regular-400.html" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-regular-400.ttf" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-regular-400.woff" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-regular-400d41d.eot" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-solid-900.eot" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-solid-900.html" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-solid-900.ttf" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-solid-900.woff" />
+    <None Include="wwwroot\Content\layout\webfonts\fa-solid-900d41d.eot" />
+    <None Include="wwwroot\Content\layout\webfonts\nextgen-icons.eot" />
+    <None Include="wwwroot\Content\layout\webfonts\nextgen-icons.html" />
+    <None Include="wwwroot\Content\layout\webfonts\nextgen-iconsd41d.eot" />
+    <None Include="wwwroot\Content\layout\webfonts\webfonts\nextgen-icons-2.html" />
+    <None Include="wwwroot\Content\layout\webfonts\webfonts\nextgen-icons-3.html" />
+    <None Include="wwwroot\Content\layout\webfonts\webfonts\nextgen-icons.html" />
+    <None Include="wwwroot\Content\Site.css" />
+    <None Include="wwwroot\Content\sweetalert.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>

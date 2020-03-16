@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Icon" href="~/layout/img/favicon.png" />
+    <title>@ViewBag.Title - Inventário Meta</title>
+    <!-- base css -->
+    <link rel="stylesheet" media="screen, print" href="~/Content/layout/css/vendors.bundle.css">
+    <link rel="stylesheet" media="screen, print" href="~/Content/layout/css/app.bundle.css" />
+    <link id="mytheme" rel="stylesheet" href="~/Content/layout/css/themes/cust-theme-8.css">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <!-- js -->
+    <script src="~/Scripts/util.js"></script>
+    <!-- Bootstrap sweetalert-->
+    <link href="~/Content/sweetalert.css" rel="stylesheet" />
+    <script src="~/Scripts/sweetalert.min.js"></script>
+    <script src="~/Scripts/dialogs.js"></script>
+    <script src="~/Scripts/util.js"></script>
+   
+</head>
+<body class="mod-bg-1 desktop chrome webkit pace-done blur">
+    <div class="page-wrapper">
+        <div class="page-inner">
+            <aside class="page-sidebar">
+                <div class="page-logo">
+                    <a href="@Url.Action("Index","Home")" class="page-logo-link press-scale-down d-flex align-items-center position-relative">
+                        <img src="~/Content/layout/img/logometa.png" alt="SmartAdmin WebApp" aria-roledescription="logo" style="height:50px;width:120px;margin:0 auto;">
+                    </a>
+                </div>
+                <nav id="js-primary-nav" class="primary-nav" role="navigation">
+                    @{
+                        //var permissoes = WebAppInterno.Models.UsuarioModel.PermissoesUsuarioLogado;
+                    }
+                    <ul id="js-nav-menu" class="nav-menu">
+                        @{
+
+                            {
+                                <li id="mnuCadastros">
+                                    <a href="#" title="Cadastros" data-filter-tags="cadastros">
+                                        <i class="fal fa-edit"></i>
+                                        <span class="nav-link-text" data-i18n="nav.cadastros">Cadastros</span>
+                                    </a>
+                                    <ul>
+                                        @{
+                                            <li>@Html.ActionLink("Início", "Index", "Home")</li>
+                                            <li>@Html.ActionLink("Máquinas", "Index", "Maquinas")</li>
+                                            <li>@Html.ActionLink("Login", "Login", "Autenticacao")</li>
+                                        }
+
+                                    </ul>
+                                </li>
+
+                            }
+                        }
+                    </ul>
+                </nav>
+            </aside>
+            <div class="page-content-wrapper">
+                <header class="page-header" role="banner">
+                    <div class="page-logo">
+                        <a href="#" class="page-logo-link press-scale-down d-flex align-items-center position-relative" data-toggle="modal" data-target="#modal-shortcut">
+                            <img src="img/logo.png" alt="SmartAdmin WebApp" aria-roledescription="logo">
+                            <span class="page-logo-text mr-1">SmartAdmin WebApp</span>
+                            <span class="position-absolute text-white opacity-50 small pos-top pos-right mr-2 mt-n2"></span>
+                            <i class="fal fa-angle-down d-inline-block ml-1 fs-lg color-primary-300"></i>
+                        </a>
+                    </div>
+                    <div class="hidden-md-down dropdown-icon-menu position-relative">
+                        <a href="#" class="header-btn btn js-waves-off" data-action="toggle" data-class="nav-function-hidden" title="Fechar/Abrir Menu">
+                            <i class="ni ni-menu"></i>
+                        </a>
+                    </div>
+                    <div class="hidden-lg-up">
+                        <a href="#" class="header-btn btn press-scale-down" data-action="toggle">
+                            <i class="ni ni-menu"></i>
+                        </a>
+                    </div>
+                    <div class="ml-auto d-flex">
+                        <div>
+                            <a href="#" data-toggle="dropdown" title="" class="header-icon d-flex align-items-center justify-content-center ml-2">
+                                <img src="~/Content/layout/img/avatar-m.png" class="profile-image rounded-circle" alt="Dr. Codex Lantern">
+
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-animated dropdown-lg">
+                                <div class="dropdown-header bg-trans-gradient d-flex flex-row py-4 rounded-top">
+                                    <div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
+                                        <span class="mr-2">
+                                            <img src="~/Content/layout/img/avatar-m.png" class="rounded-circle profile-image" alt="Dr. Codex Lantern">
+                                        </span>
+                                        <div class="info-card-text">
+                                            <div class="fs-lg text-truncate text-truncate-lg">Usuário</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item fw-500 pt-3 pb-3" href="/Autenticacao/Lougout">
+                                    <span data-i18n="drpdwn.page-logout">Sair</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <main id="js-page-content" role="main" class="page-content">
+                    <!-- base js -->
+                    <script src="~/Content/layout/js/vendors.bundle.js"></script>
+                    <script src="~/Content/layout/js/app.bundle.js"></script>
+                    @RenderBody()
+                </main>
+                <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div>
+                <footer class="page-footer" role="contentinfo">
+                    <div class="d-flex align-items-center flex-1 text-muted">
+                        <span class="hidden-md-down fw-700">
+                            2020 © Meta3 by&nbsp;
+                            <a href='http://meta3.com.br/' class='text-primary fw-500' title='Meta3' target='_blank'>meta3.com.br</a>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    @if (TempData["ChamaMetodoJS"] != null)
+    {
+        <script type="text/javascript">
+            @Html.Raw(TempData["ChamaMetodoJS"] )
+        </script>
+    }
+</body>
+</html>
