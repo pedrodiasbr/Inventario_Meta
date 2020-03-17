@@ -1,0 +1,117 @@
+﻿@model InventarioMeta.Models.Autenticacao.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Icon" href="~/Content/layout/img/logometa.png" />
+    <title>@ViewBag.Title - CityMidia</title>
+    <!-- base css -->
+    <link rel="stylesheet" media="screen, print" href="~/Content/layout/css/vendors.bundle.css">
+    <link rel="stylesheet" media="screen, print" href="~/Content/layout/css/app.bundle.css">
+    <link href="~/Content/layout/css/page-login.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <!-- js -->
+    <script src="~/Scripts/util.js"></script>
+    <!-- Bootstrap sweetalert-->
+    <link href="~/Content/sweetalert.css" rel="stylesheet" />
+    <script src="~/Scripts/sweetalert.min.js"></script>
+    <script src="~/Scripts/dialogs.js"></script>
+    <script src="~/Scripts/util.js"></script>
+
+   
+</head>
+<body>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="page-wrapper">
+            <div class="page-inner bg-brand-gradient">
+                <div class="page-content-wrapper bg-transparent m-0">
+                    <div class="height-10 w-100 shadow-lg px-4 bg-brand-gradient">
+                        <div class="d-flex align-items-center container p-0">
+                            <div class="page-logo width-mobile-auto m-0 align-items-center justify-content-center p-0 bg-transparent bg-img-none shadow-0 height-9">
+                                <a href="javascript:void(0)" class="page-logo-link press-scale-down d-flex align-items-center">
+                                    <div class="logo">
+                                        <img src="~/Content/layout/img/logometa.png" style="height:50px;width:120px;" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1" style="background: url(img/svg/pattern-1.svg) no-repeat center bottom fixed; background-size: cover;">
+                        <div class="container py-4 py-lg-5 my-lg-5 px-4 px-sm-0">
+
+                            <div class="row">
+                                <div class="col-md-8 ml-auto mr-auto">
+                                    @if (TempData["Mensagem"] != null)
+                                    {
+                                        <div class="alert alert-success">
+                                            @TempData["Mensagem"]
+                                        </div>
+                                    }
+
+                                    @if (TempData["MensagemErro"] != null)
+                                    {
+                                        <div class="form-group">
+                                            <div class="alert alert-danger">
+                                                @TempData["MensagemErro"]
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 ml-auto mr-auto">
+                                    <h1 class="text-white fw-300 mb-3 d-sm-block d-md-none">
+                                        Login
+                                    </h1>
+                                    <div class="card p-4 rounded-plus bg-faded">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Login, new { htmlAttributes = new { @class = "form-label" } })
+                                            @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Senha, new { htmlAttributes = new { @class = "form-label" } })
+                                            @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="submit" value="Login" class="btn btn-info btn-block btn-lg" />
+                                        </div>
+
+                                        <div class="text-center">
+                                            <a class="h6 text-black-50" href="@Url.Action("EsqueciSenha", "Autenticacao")">Esqueceu a senha?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+    @if (TempData["ChamaMetodoJS"] != null)
+    {
+        <script type="text/javascript">
+            @Html.Raw(TempData["ChamaMetodoJS"] )
+        </script>
+    }
+
+</body>
+</html>
